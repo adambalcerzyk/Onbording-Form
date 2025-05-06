@@ -1,6 +1,7 @@
 import { useCallback } from 'react';
-
-const useCorporationValidation = () => {
+import type { UseFormSetError } from "react-hook-form";
+import type { FormValues } from "../pages/OnboardingForm";
+const useCorporationValidation = (setError: UseFormSetError<FormValues>) => {
   const validateCorporationNumber = useCallback(async (corpNum: string): Promise<{ valid: boolean; message?: string }> => {
     try {
       const response = await fetch(`https://fe-hometask-api.qa.vault.tryvault.com/corporation-number/${corpNum}`);

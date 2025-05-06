@@ -38,7 +38,7 @@ const OnboardingForm = () => {
     mode: "onBlur",
   });
 
-  const { validateCorporationNumber } = useCorporationValidation(setError);
+  const  validateCorporationNumber  = useCorporationValidation(setError);
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
@@ -125,6 +125,7 @@ const OnboardingForm = () => {
             py: 1.5,
             backgroundColor: "#000",
             color: "#fff",
+            width:"100%",
             borderRadius: 2,
             textTransform: "none",
             '&:hover': {
