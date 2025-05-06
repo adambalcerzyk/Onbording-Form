@@ -30,7 +30,7 @@ const OnboardingForm = () => {
   const {
     control,
     handleSubmit,
-    setError,
+    
     formState: { errors },
     watch,
   } = useForm<FormValues>({
@@ -38,7 +38,7 @@ const OnboardingForm = () => {
     mode: "onBlur",
   });
 
-  const  validateCorporationNumber  = useCorporationValidation(setError);
+  const  validateCorporationNumber  = useCorporationValidation();
 
   const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
