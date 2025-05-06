@@ -132,7 +132,6 @@ const OnboardingForm = () => {
                 backgroundColor: "#333",
             },
             }}
-            endIcon={<span style={{ fontSize: "1.2rem" }}>→</span>}
         >
             Submit
         </Button>
